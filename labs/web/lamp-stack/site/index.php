@@ -1,7 +1,7 @@
 <?php
-$dbuser='root';
-$dbpass='root';
-$database="test";
+$dbuser = 'root';
+$dbpass = 'root';
+$database = 'test';
 
 ?>
 
@@ -11,24 +11,18 @@ $database="test";
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vagrant lamp stack basic setup</title>
+  <title>Vagrant LAMP stack basic setup</title>
 </head>
 <body>
-<h1>Vagrant LAMP  </h1>
+<h1>Vagrant LAMP</h1>
 
 <?php
 
-try{
-
-  $conn=new PDO("mysql :host=localhost;dbname=$database",$dbuser,$dbpass);
-
+try {
+  $conn = new PDO("mysql:host=localhost;dbname=$database", $dbuser, $dbpass);
   echo "<h2>POSTS</h2>";
-  
-
-}catch(PDOException $e){
-  print "error". $e->getMessage(); "</br> ";
-  // die();
-
+} catch (PDOException $e) {
+  print 'error' . $e->getMessage() . '<br>';
 }
 ?>
 
@@ -37,4 +31,3 @@ phpinfo();
 ?>
 </body>
 </html>
-

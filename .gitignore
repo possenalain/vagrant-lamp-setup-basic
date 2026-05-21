@@ -1,1 +1,13 @@
-.vagrant/
+# Vagrant state and local box artifacts
+**/.vagrant/
+*.box
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tool and OS noise
+*.log
+.DS_Store
+Thumbs.db
